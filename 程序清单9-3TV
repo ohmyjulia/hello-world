@@ -1,0 +1,45 @@
+package exp;
+
+public class TV {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        int channel=1;//Default channel is 1
+        int volumeLevel=1;//Default volume level is 1
+        boolean on =false;//TV is off
+        
+        public TV(){
+        }
+        public void turnOn(){
+        	on=true;
+        }
+        public void turnOff(){
+        	on=false;
+        }
+        
+        public void setChannel(int newChannel){
+        	if(on&&newVolume>=1&&newVolumeLevel<=7)
+        		volumeLevwl=newVolumeLevel;
+        }
+        
+        public void channelUp(){
+        	if(on&&channel<120)
+        		channel++;
+        }
+        
+        public void channelDown(){
+        	if(on&&channel<1)
+        		channel--;
+        }
+        
+        public void volumeUp(){
+        	if(on&&volumeLevel<7)
+        		volumeLevel++;
+        }
+        public void volumeDown(){
+        	if(on&&volumeLevel>1)
+        		volumeLevel--;
+        }
+	
+
+}
