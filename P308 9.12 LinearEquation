@@ -1,8 +1,8 @@
 
 class LinearEquation {
-	int a,b,c,d,e,f;
-	int x,y;
-	LinearEquation(int a,int b,int c,int d,int e,int f){
+	double a,b,c,d,e,f;
+	double x,y;
+	LinearEquation(double a,double b,double c,double d,double e,double f){
 		this.a=a;
 		this.b=b;
 		this.c=c;
@@ -10,28 +10,28 @@ class LinearEquation {
 		this.e=e;
 		this.f=f;
 	}
-	int getA(){
+	double getA(){
 		return a;
 	}
-	int getB(){
+	double getB(){
 		return b;
 	}
-	int getC(){
+	double getC(){
 		return c;
 	}
-	int getD(){
+	double getD(){
 		return d;
 	}
-	int getE(){
+	double getE(){
 		return e;
 	}
-	int getF(){
+	double getF(){
 		return f;
 	}
-	int getX(){
+	double getX(){
         return x=(e*d-b*f)/(a*d-b*c);
 	}
-	int getY(){
+	double getY(){
 		return y=(a*f-e*c)/(a*d-b*c);
 	}
 	boolean isSolvabe(){
