@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Linear {
+
+	public static void main(String[] args) {
+		Scanner input =new Scanner(System.in);
+		System.out.println("输入第一条线段 的两个端点");
+		System.out.print("x1=");
+		int x1=input.nextInt();
+		System.out.print("y1=");
+		int y1=input.nextInt();
+		System.out.print("x2=");
+		int x2=input.nextInt();
+		System.out.print("y2=");
+		int y2=input.nextInt();
+		System.out.println("输入第二条线段 的两个端点");
+		System.out.print("x3=");
+		int x3=input.nextInt();
+		System.out.print("y3=");
+		int y3=input.nextInt();
+		System.out.print("x4=");
+		int x4=input.nextInt();
+		System.out.print("y4=");
+		int y4=input.nextInt();
+
+		int a=y1-y2;
+		int b=-x1+x2;
+		int e=(y1-y2)*x1-(x1-x2)*y1;
+		int c=-y3+y4;
+		int d=x3-x4;
+		int f=(y3-y4)*x3-(x3-x4)*y3;
+		
+		LinearEquation equation=new LinearEquation(a,b,c,d,e,f);
+		if(equation.isSolvabe()){
+			System.out.println("线段的交点是：（"+equation.getX()+","+equation.getY()+")");
+		}
+		else
+		{
+			System.out.println("这条线段无交点");
+		}
+		
+		
+	}
+
+}
