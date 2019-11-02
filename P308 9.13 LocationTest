@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LocationText {
+public class LocationTest {
     public static void main(String[] args) {
         System.out.print("Enter the number of rows and columns in the array:");
         Scanner input = new Scanner(System.in);
