@@ -1,5 +1,5 @@
 
-public class RegularPolygonText {
+public class RegularPolygonTest {
 
 	public static void main(String[] args) {
 		RegularPolygon r1=new RegularPolygon();
