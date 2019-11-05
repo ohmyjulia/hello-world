@@ -1,5 +1,5 @@
-public class CircleFromSimpleGeometricObject {
-	    extends SimpleGeometricObject
+public class CircleFromSimpleGeometricObject 
+	    extends SimpleGeometricObject{
 	private double radius;
 	public CircleFromSimpleGeometricObject(){
 	
