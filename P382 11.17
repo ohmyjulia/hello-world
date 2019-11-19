@@ -1,0 +1,38 @@
+package perfectsquare;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class PerfectSquare {
+
+	public static void main(String[] args) {
+		
+		System.out.print("Enter an integer m:");
+		
+		Scanner input=new Scanner(System.in);
+		int m=input.nextInt();
+		int flag=m;
+		int n=1;
+		int i=2;
+		ArrayList<Integer> list1=new ArrayList<>();
+		ArrayList<Integer> list2=new ArrayList<>();
+		int a[]=new int[1100];
+		while(m!=1) {
+			if(m%i==0) {
+				list1.add(i);
+				m=m/i;
+				a[i]++;
+			}
+			else {
+				i++;
+			}
+		}
+		for(int j=0;j<1000;j++) {
+			if(a[j]!=0&&(a[j]%2==1)) {
+				n=n*j;
+			}
+		}
+		System.out.println("The smallest number n for m*n to be a perfect square is "+n);
+		System.out.println("m*n is "+n*flag);
+
+	}
+
+}
