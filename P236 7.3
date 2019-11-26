@@ -1,0 +1,22 @@
+package 第七章;
+import java.util.Scanner;
+public class times {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int[] zs = new int[100];
+        System.out.print("Enter the integers between 1 and 100:");
+        while (input.hasNextInt()) {
+            int temp = input.nextInt();
+            for (int j = 0; j < zs.length; j++) {
+                if ( temp== j)
+                    zs[j - 1]++;
+            }
+        }
+        for (int i = 0; i < zs.length; i++) {
+            if (zs[i] == 1)
+                System.out.println(i + 1 + " occurs " + "1 time");
+            if (zs[i] > 1)
+                System.out.println(i + 1 + " occurs " + zs[i] + "times");
+        }
+    }
+}
