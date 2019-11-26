@@ -1,0 +1,36 @@
+package 第七章;
+import java.util.Scanner;
+public class distinctnumber {
+
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter ten numbers: ");
+		int[]a=new int[100];
+		int[]b=new int[100];
+		int ans=1;
+		for(int i=0;i<10;i++){
+			a[i]=input.nextInt();
+		}
+		b[0]=a[0];
+		for(int i=1;i<10;i++){
+			for(int j=0;j<i;j++){
+				if(a[i]!=a[j]){
+					b[ans]=a[i];
+					ans++;
+					break;
+				}
+				
+				else
+					continue;
+			}
+		}
+		System.out.println("The number of distinct number is "+ans);
+		System.out.print("The distinct numbers are:");
+		for(int i=0;i<ans;++i)
+		{
+			System.out.print(b[i]+" ");
+		}
+
+	}
+
+}
