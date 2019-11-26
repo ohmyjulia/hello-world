@@ -1,0 +1,29 @@
+package chapter7;
+import java.util.Scanner;
+public class bubblesort {
+
+	public static void main(String[] args) {
+		double[] a=new double[10];
+		double t;
+		System.out.print("Enter 10 numbers:");
+		Scanner input=new Scanner(System.in);
+		for(int i=0;i<10;i++) {
+			a[i]=input.nextDouble();
+		}
+		for(int i=0;i<10;i++) {
+			for(int j=i+1;j<10;j++) {
+				if(a[i]>a[j]) {
+					t=a[i];
+					a[i]=a[j];
+					a[j]=t;
+				}
+			}
+		}
+		for(int i=0;i<10;i++) {
+			System.out.println(a[i]);
+		}
+	
+
+	}
+
+}
