@@ -1,0 +1,42 @@
+package chapter7;
+import java.util.Scanner;
+
+public class 划分列表 {
+
+	public static void main(String[] args) {
+		int n,t,j,m;
+		int[] left=new int[110];
+		int[] right=new int[110];
+		int[] temp=new int[110];
+		System.out.print("Enter list: ");
+		Scanner input=new Scanner(System.in);
+		n=input.nextInt();
+		for(int i=0;i<n;i++) {
+			temp[i]=input.nextInt();
+		}
+		t=temp[0];
+		j=0;
+		m=0;
+
+		for(int i=0;i<n;i++) {
+			if(temp[i]<t) {
+				left[j]=temp[i];
+				j++;
+			}
+			else if(temp[i]>t) {
+				right[m]=temp[i];
+				m++;
+			}
+		}
+		System.out.print("After the partition the list is ");
+		for(int i=0;i<j;i++) {
+			System.out.print(left[i]+" ");
+		}
+		System.out.print(t+" ");
+		for(int i=0;i<m;i++) {
+			System.out.print(right[i]+" ");
+		}
+
+	}
+
+}
